@@ -1,0 +1,33 @@
+﻿<Window x:Class="TransaqApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:TransaqApp"
+        mc:Ignorable="d"
+        Title="TransaqApp" Height="600" Width="400">
+    <Grid>
+       
+        <materialDesign:Card
+            Width="350" Height="100"
+            Padding="8"
+            Foreground="{DynamicResource PrimaryHueLightForegroundBrush}">
+            <DockPanel>
+                <ToggleButton DockPanel.Dock="Left" Click="ButtonConnect_OnClick" Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                    Width="50">
+                    <materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                        <SolidColorBrush
+                            Color="Green" />
+                    </materialDesign:ToggleButtonAssist.SwitchTrackOnBackground>
+                    <materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                        <SolidColorBrush
+                            Color="Red" />
+                    </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
+                </ToggleButton>
+                <TextBox x:Name="Status" Margin="10" VerticalAlignment="Center" Text="DISCONNECTED" FontSize="25" FontWeight="Bold" BorderBrush="Snow"></TextBox>
+                <Button DockPanel.Dock="Right" Height="100" Click="ButtonConnectionEdit_OnClick" Content="{materialDesign:PackIcon Kind=Pencil}" Style="{StaticResource MaterialDesignToolForegroundButton}" VerticalAlignment="Center" ToolTip="Icon"/>
+            </DockPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>
