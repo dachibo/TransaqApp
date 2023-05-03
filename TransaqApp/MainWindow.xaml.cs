@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Navigation;
 using TransaqApp.Database;
 
 namespace TransaqApp
@@ -63,6 +64,14 @@ namespace TransaqApp
         {
             PasswordWindow passwordWindow = new PasswordWindow();
             passwordWindow.ShowDialog();
+        }
+
+        private void ShowLogs_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new LogsWindow());
+            // LogsWindow logsWindow = ;
+            // nav.Navigate(logsWindow);
+            // logsWindow.Show();
         }
     }
 }

@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         Title="TransaqApp" Height="600" Width="400">
     <Grid>
-       
         <materialDesign:Card
             Width="350" Height="100"
             Padding="8"
@@ -26,8 +25,19 @@
                     </materialDesign:ToggleButtonAssist.SwitchTrackOffBackground>
                 </ToggleButton>
                 <TextBox x:Name="Status" Margin="10" VerticalAlignment="Center" Text="DISCONNECTED" FontSize="25" FontWeight="Bold" BorderBrush="Snow"></TextBox>
-                <Button DockPanel.Dock="Right" Height="100" Click="ButtonConnectionEdit_OnClick" Content="{materialDesign:PackIcon Kind=Pencil}" Style="{StaticResource MaterialDesignToolForegroundButton}" VerticalAlignment="Center" ToolTip="Icon"/>
+                <Button DockPanel.Dock="Right" Height="50" Click="ButtonConnectionEdit_OnClick" Style="{StaticResource MaterialDesignToolForegroundButton}" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Pencil" Width="40" Height="40"/>
+                </Button>
             </DockPanel>
         </materialDesign:Card>
+        <Button x:Name="ShowLogs" 
+                Width="60" Height="60"
+                Style="{StaticResource MaterialDesignToolButton}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="0,0,30,30"
+                Click="ShowLogs_OnClick">
+            <materialDesign:PackIcon Kind="ScriptTextOutline" Width="50" Height="50"/>
+        </Button>
     </Grid>
 </Window>
